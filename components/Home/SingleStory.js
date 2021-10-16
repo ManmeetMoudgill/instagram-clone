@@ -31,7 +31,7 @@ const styles=StyleSheet.create({
     storyLogo:{
         width:80,
         height:80,
-        borderColor:'#ff8501 ',
+        borderColor:'#FF8501',
         borderWidth:3,
         shadowColor:'#EA582D',
         resizeMode:'stretch',

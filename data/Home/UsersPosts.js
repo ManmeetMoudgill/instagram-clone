@@ -11,6 +11,14 @@ export const Posts=[
             {
                 user:'Manmeeet Moudgill',
                 comment:"asdasdasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+            },
+            {
+                user:'Manmeeet Moudgill',
+                comment:"asdasdasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+            },
+            {
+                user:'Manmeeet Moudgill',
+                comment:"asdasdasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
             }
         ]
     },
@@ -24,6 +32,18 @@ export const Posts=[
             comments:[
                 {
                     user:'Manmeeet Moudgill',
+                    comment:"HELLO THERE"
+                },
+                {
+                    user:'Sakshi Moudgill',
+                    comment:"HELLO THERE"
+                },
+                {
+                    user:'Jitesh Moudgill',
+                    comment:"HELLO THERE"
+                },
+                {
+                    user:'Suman Moudgill',
                     comment:"HELLO THERE"
                 }
             ]

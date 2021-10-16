@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image,TouchableOpacity} from 'react-native'
+import { View, Text, StyleSheet, Image,TouchableOpacity, ScrollView} from 'react-native'
 import FooterComments from './FooterComments'
 
 
@@ -33,16 +33,22 @@ const PostFooter = ({likes,comments}) => {
 
                 {/* OTHER VIEWS HERE */}
                 <Text style={styles.likes}>{likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} likes</Text>
-                {comments.map((arr,id)=>{
-                    
-                   return(
-                       
-                       <FooterComments key={id} user={arr.user} comment={arr.comment}/>
-                    
-                    ) 
-                       
-                       
-                })}
+                <View style={styles.commentContainer}>
+
+                    <ScrollView vertical={true}>
+
+                    {comments.map((arr,id)=>{
+                        
+                        return(
+                            
+                            <FooterComments key={id} user={arr.user} comment={arr.comment}/>
+                            
+                            ) 
+                            
+                            
+                        })}
+                    </ScrollView>
+                </View>
         </View>
     )
 }
@@ -74,6 +80,11 @@ const styles=StyleSheet.create({
         color:'white',
         marginLeft:10,
         marginTop:2
+    },commentContainer:{
+        height:100,
+        paddingLeft:5,
+        paddingRight:5,
+        marginTop:8
     }
 
 })

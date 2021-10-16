@@ -17,6 +17,7 @@ const FooterComments = ({user,comment}) => {
 const styles=StyleSheet.create({
     commentDiv:{
         flexDirection:'row',
+        marginBottom:10
     },user:{
         color:'white',
         fontWeight:'bold',
@@ -24,7 +25,7 @@ const styles=StyleSheet.create({
         paddingRight:6,
     },comment:{
         color:'white',
-        paddingLeft:6,
+        paddingLeft:10,
         paddingRight:6
     }
 })

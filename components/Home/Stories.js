@@ -29,8 +29,7 @@ const styles=StyleSheet.create({
         justifyContent:'space-around',
         overflow:'scroll',
         marginTop:5,
-        borderBottomColor:'gray',
-        borderBottomWidth:1
+       
     }
 })
 export default Stories

@@ -9,7 +9,10 @@ const SingleStory = ({image,name}) => {
            <Image style={styles.storyLogo}  source={{uri:image}}/>
         </TouchableOpacity>
            <TouchableOpacity>
-               <Text style={styles.storyUser}>{name}</Text>
+               <Text style={styles.storyUser}>{
+                name.length>11 ? name.slice(0,10).toLowerCase()+'...':name.toLowerCase()
+
+               }</Text>
            </TouchableOpacity>
         </View>
     )
@@ -28,7 +31,7 @@ const styles=StyleSheet.create({
     storyLogo:{
         width:80,
         height:80,
-        borderColor:'#EA582D',
+        borderColor:'#ff8501 ',
         borderWidth:3,
         shadowColor:'#EA582D',
         resizeMode:'stretch',

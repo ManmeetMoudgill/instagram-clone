@@ -17,15 +17,11 @@ const FooterComments = ({user,comment}) => {
 const styles=StyleSheet.create({
     commentDiv:{
         flexDirection:'row',
-        borderColor:'white',
-        borderWidth:2
     },user:{
         color:'white',
         fontWeight:'bold',
         paddingLeft:6,
         paddingRight:6,
-        borderWidth:2,
-        borderColor:'white'
     },comment:{
         color:'white',
         paddingLeft:6,

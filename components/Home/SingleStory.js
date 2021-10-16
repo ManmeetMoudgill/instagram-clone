@@ -34,7 +34,7 @@ const styles=StyleSheet.create({
         borderColor:'#FF8501',
         borderWidth:3,
         shadowColor:'#EA582D',
-        resizeMode:'stretch',
+        resizeMode:'cover',
         borderRadius:50
     },
     storyUser:{

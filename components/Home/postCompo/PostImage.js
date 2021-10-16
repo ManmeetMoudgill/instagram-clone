@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text, StyleSheet,Image } from 'react-native'
 
-const PostImage = () => {
+const PostImage = ({image}) => {
     return (
         <View style={styles.postImageView}>
-           <Image style={styles.postImage} source={require('../../../assets/girlPost.png')}/>
+           <Image style={styles.postImage} source={{uri:image}}/>
         </View>
     )
 }
@@ -12,13 +12,11 @@ const PostImage = () => {
 
 const styles=StyleSheet.create({
     postImageView:{
-        borderWidth:2,
-        borderColor:"white",
         marginTop:5,
         width:'100%'
     },
     postImage:{
-        height:500,
+        height:450,
         width:'100%',
         resizeMode:'stretch'
     }

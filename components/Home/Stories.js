@@ -28,7 +28,9 @@ const styles=StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around',
         overflow:'scroll',
-        marginTop:5
+        marginTop:5,
+        borderBottomColor:'gray',
+        borderBottomWidth:1
     }
 })
 export default Stories

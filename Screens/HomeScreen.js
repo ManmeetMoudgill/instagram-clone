@@ -3,6 +3,7 @@ import Header from '../components/Home/Header'
 import { View,Text, SafeAreaView,StyleSheet,ScrollView } from 'react-native'
 import Stories from '../components/Home/Stories'
 import PostMainComponent from '../components/Home/PostMainComponent'
+import BottomTabs from '../components/Home/BottomTabs';
 import {Posts} from '../data/Home/UsersPosts.js';
 import {Divider} from 'react-native-elements'
 
@@ -25,6 +26,7 @@ const HomeScreen = () => {
                     })}
                     </View>
             </ScrollView>
+            <BottomTabs/>
         </SafeAreaView>
     )
 }

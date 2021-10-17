@@ -20,7 +20,7 @@ const HomeScreen = () => {
                 {Posts.map((arr,id)=>{
                     return (
                         
-                        <PostMainComponent key={id} id={id} comments={arr.comments} likes={arr.likes} postImage={arr.imageUrl} postName={arr.user} postLogo={arr.profile_picture} />
+                        <PostMainComponent key={id} commentsArray={arr.comments} id={id} user={arr.user} caption={arr.caption} comments={arr.comments} likes={arr.likes} postImage={arr.imageUrl} postName={arr.user} postLogo={arr.profile_picture} />
                         )
                     })}
                     </View>

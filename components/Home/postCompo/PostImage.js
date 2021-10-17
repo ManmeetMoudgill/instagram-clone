@@ -13,12 +13,12 @@ const PostImage = ({image}) => {
 const styles=StyleSheet.create({
     postImageView:{
         marginTop:5,
-        width:'100%'
+        width:'100%',
+        height:450,
     },
     postImage:{
-        height:450,
-        width:'100%',
-        resizeMode:'stretch'
+        height:'100%',
+        resizeMode:'cover'
     }
 })
 export default PostImage

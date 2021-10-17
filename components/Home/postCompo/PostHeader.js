@@ -38,8 +38,8 @@ const styles=StyleSheet.create({
         alignItems:'center' 
        },
        headerLeftLogo:{
-            width:50,
-            height:50,
+            width:40,
+            height:40,
             borderColor:'#FF8501',
             borderWidth:2,
             borderRadius:50

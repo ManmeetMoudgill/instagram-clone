@@ -2,8 +2,26 @@ import React from 'react'
 import { View, Text, StyleSheet, Image,TouchableOpacity, ScrollView} from 'react-native'
 import FooterComments from './FooterComments'
 
+const PostFooter = ({likes,commentsArray,comments,caption,user}) => {
+  
 
-const PostFooter = ({likes,comments}) => {
+    const CommentSetting=({commentsArray})=>{
+        return (
+          <View>
+            {
+                !!commentsArray.length && (
+                    
+                    <Text style={{color:'gray'}}>
+                            {commentsArray.length>=1?'View':''} {commentsArray.length>1?'all':''} {commentsArray.length}{" "}
+                            {commentsArray.length>1?'Comments':'Comment'}</Text>
+                       
+                        )
+                    }
+            </View>
+        )
+
+    }
+        
     return (
         <View style={styles.footerView} >
                 {/* UPPER DIV */}
@@ -33,7 +51,17 @@ const PostFooter = ({likes,comments}) => {
 
                 {/* OTHER VIEWS HERE */}
                 <Text style={styles.likes}>{likes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} likes</Text>
-                <View style={styles.commentContainer}>
+                <View style={{marginTop:4}}>
+                    <Text style={styles.caption}>
+                        <Text style={styles.CaptionUser}>{user}</Text>
+                        <Text> {caption}</Text>
+                    </Text>
+                </View>
+                <View style={{marginLeft:10}}>
+                      <CommentSetting commentsArray={commentsArray} />
+                </View>
+                {
+                    commentsArray.length>=1&&<View style={styles.commentContainer}>
 
                     <ScrollView vertical={true}>
 
@@ -41,7 +69,7 @@ const PostFooter = ({likes,comments}) => {
                         
                         return(
                             
-                            <FooterComments key={id} user={arr.user} comment={arr.comment}/>
+                            <FooterComments key={id}  user={arr.user} comment={arr.comment}/>
                             
                             ) 
                             
@@ -49,9 +77,12 @@ const PostFooter = ({likes,comments}) => {
                         })}
                     </ScrollView>
                 </View>
+                }
+                
         </View>
     )
 }
+
 
 
 const styles=StyleSheet.create({
@@ -79,12 +110,22 @@ const styles=StyleSheet.create({
     },likes:{
         color:'white',
         marginLeft:10,
-        marginTop:2
+        marginTop:2,
+        fontWeight:"600",
+    
     },commentContainer:{
         height:100,
         paddingLeft:5,
         paddingRight:5,
-        marginTop:8
+        marginTop:5
+    },caption:{
+        color:'white',
+        marginLeft:10
+    },CaptionUser:{
+        color:'white',
+        fontWeight:'bold',
+       
+        
     }
 
 })

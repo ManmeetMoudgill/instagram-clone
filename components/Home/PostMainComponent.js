@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { View, Text,StyleSheet } from 'react-native'
 import PostFooter from './postCompo/PostFooter'
 import PostHeader from './postCompo/PostHeader'
 import PostImage from './postCompo/PostImage'
-const PostMainComponent = ({id,comments,likes,postImage,postName,postLogo}) => {
+
+
+const PostMainComponent = ({commentsArray,id,user,caption,comments,likes,postImage,postName,postLogo}) => {
     return (
         <View  key={id}>
             {/* post header */}
@@ -13,7 +15,8 @@ const PostMainComponent = ({id,comments,likes,postImage,postName,postLogo}) => {
             <PostImage image={postImage}/>
 
             {/* POST FOOTER */}
-            <PostFooter likes={likes} comments={comments}/>
+            
+            <PostFooter  likes={likes} commentsArray={commentsArray} comments={comments} caption={caption} user={user}/>
            
 
         </View>
